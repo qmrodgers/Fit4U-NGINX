@@ -1,37 +1,135 @@
 <!DOCTYPE html>
-
 <html lang="en">
-  <head>
-    <meta charset="utf-8" />
-    <title>NGINX on Railway</title>
-    <meta name="description" content="Choo Choo!" />
-
-    <link rel="icon" href="/favicon.ico" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-
-    <link rel="stylesheet" href="/styles.css?v=1.0" />
-  </head>
-
-  <body>
-    <main>
-      <img
-        src="https://railway.app/brand/logo-light.svg"
-        alt="Railway logo"
-        class="logo"
-      />
-
-      <h1>NGINX on Railway</h1>
-
-      <p>
-        Choo Choo! This is an example of an NGINX static site running on
-        Railway.
-        <a
-          href="https://github.com/railwayapp/starters/tree/master/examples/nginx"
-          >View source</a
-        >.
-      </p>
-    </main>
-
-    <script src="/script.js"></script>
-  </body>
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <base href="./">
+    <title>Fit4U - Fitness Redefined</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro:ital,wght@0,200;0,300;0,400;0,600;0,700;0,900;1,200;1,300;1,400;1,600;1,700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./lib/css/_layout.css">
+    <link rel="stylesheet" href="./lib/css/index.css">
+    <link rel="icon" type="image/x-icon" href="./lib/images/favicon/0.5x/Asset2@0.5x.png">
+    <script src="./lib/js/index.js" defer></script>
+</head>
+<body>
+    <div class="nav-wrapper">
+    <div class="nav-container">
+        <a href="./index.html" class="brand-link"><h3 class="nav-brand">Fit4U</h3></a>
+        <nav class="navbox">
+            <ul class="navbar">
+                <li><a href="./pages/products/products.html" class="nav-dropper">Products</a> <ul>
+                    <a href="./pages/products/subpages/videos.html" class="child-nav">
+                        <li>Videos</li>
+                    </a>
+                    <a href="./pages/products/subpages/training.html" class="child-nav">
+                        <li>Training</li>
+                    </a>
+                    <a href="./pages/products/subpages/clothing.html" class="child-nav">
+                        <li>Clothing</li>
+                    </a>
+                </ul></li>
+                <li><a href="./pages/about/about.html" class="nav-dropper">About Us</a> <ul>
+                    <a href="./pages/about/subpages/annual-report.html" class="child-nav">
+                        <li>Annual Report</li>
+                    </a>
+                    <a href="./pages/about/subpages/management-team.html" class="child-nav">
+                        <li>Management Team</li>
+                    </a>
+                    <a href="./pages/about/subpages/history.html" class="child-nav">
+                        <li>History</li>
+                    </a>
+                </ul></li>
+                <li><a href="./pages/testimonials/testimonials.html" class="nav-dropper">Customer Testimonials</a></li>
+                <li><a href="./pages/articles/articles.html" class="nav-dropper">Articles</a> <ul>
+                    <a href="./pages/articles/subpages/employee-blog.html" class="child-nav">
+                        <li>Employee Blog</li>
+                    </a>
+                    <a href="./pages/articles/subpages/articles.html" class="child-nav">
+                        <li>Articles</li>
+                    </a>
+                    <a href="./pages/articles/subpages/columns.html" class="child-nav">
+                        <li>Columns</li>
+                    </a>
+                </ul></li>
+                <li class="contact"><a href="./pages/contact/contact.html" class="nav-dropper">Contact Us</a></li>
+            </ul>
+            
+        </nav>
+    </div>
+    </div>
+    <nav class="breadcrumb">
+        <ul>
+            <li>Home</li>
+        </ul>
+    </nav>
+    <section class="main-container">
+        <header class="jumbotron">
+            <div class="jt-text">
+                <h1>FIT4U</h1>
+                <p>BUILD A BETTER U</p>
+                <a href="./pages/about/about.html">LEARN MORE</a>
+            </div>
+            <div class="vignette"></div>
+        </header>
+        <div class="content-grid">
+            <aside>
+            </aside>
+            <main>
+            </main>
+        </div>
+    </section>
+    <button id="modalBTN">
+        <div id="modalShoutout">
+            <nobr>Join our newsletter!</nobr>
+            <div id="modalTriangle"></div>
+        </div>
+        <span>&#128203</span>
+    </button>
+    <div id="modal">
+        <div id="modal-background"></div>
+        <div id="modal-content">
+            <span id="modal-close">&times</span>
+            <h1>Welcome to FIT4U!</h1>
+            <form>
+                <fieldset>
+                    <legend>Personal Information: </legend>
+                    <label> First Name: </label>
+                    <input type ="text" id="firstname" placeholder = "Enter First Name" name ="firstname" required>
+                    <br><br>
+                    <label> Last Name: </label>
+                    <input type ="text" id="lastname" placeholder = "Enter Last Name" name ="lastname" required>
+                    <br><br>
+                    <label>Date of Birth:</label>
+                    <input type="date" name="DoB" required>
+                    <br><br>
+                    <!-- spacing on label is a little too tight without the below style-->
+                    <label class="subheading-label">Gender:</label>
+                    <br>
+                    <input type ="radio" id="MALE" name="GENDER" value="MALE">
+                    <label for="MALE">Male</label> <br>
+                    <input type="radio" id="FEMALE" name="GENDER" value="FEMALE">
+                    <label for="FEMALE">Female</label><br>
+                    <input type="radio" id="OTHER" name="GENDER" value="OTHER">
+                    <label for="OTHER">Other</label><br>
+                    <br>
+                    <!-- spacing on label is a little too tight without the below style-->
+                    <label class="subheading-label">What are you looking to accomplish in joining FIT4U?</label>
+                    <br>
+                    <textarea name="desc" id="desc" cols="40" rows="7" placeholder="Briefly tell us what you want to accomplish"></textarea>
+                    <br>
+                    <!-- spacing on label is a little too tight without the below style-->
+                    <label class="subheading-label">Would you want access to a personal trainer?</label>
+                    <br>
+                    <input type="radio" id="YES" name="BUTTON" value="YES">
+                    <label for="YES">Yes </label><br>
+                    <input type="radio" id="NO" name="BUTTON" value="NO">
+                    <label for="NO">No</label><br>
+                </fieldset>
+            </form>
+        </div>
+    </div>
+</body>
 </html>
