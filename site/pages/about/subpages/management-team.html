@@ -10,7 +10,9 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro:ital,wght@0,200;0,300;0,400;0,600;0,700;0,900;1,200;1,300;1,400;1,600;1,700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="./lib/css/_layout.css">
+    <link rel="stylesheet" href="./lib/css/about/subpages/management-team.css">
     <link rel="icon" type="image/x-icon" href="./lib/images/favicon/0.5x/Asset2@0.5x.png">
+<script src="./lib/js/index.js" defer></script>
 </head>
 <body>
     <div class="nav-wrapper">
@@ -66,7 +68,132 @@
         </ul>
     </nav>
     <section class="main-container">
+
+
+        <div class = "row">
+            <div class = "column">
+                <h2>Owner and CEO:<br>Phil Bucket</h2>
+                    <img src="./lib/images/spandex.gif" alt="Phil Bucket ">
+                        <p>
+                        Phil is a fitness guru. He is an outdoor enthusiast and has backpacked all over the world.
+                        However, on an expedition in the Tabet, Phil became lost and was on his own for 18 months.
+                        During this time, he developed his exercise program.
+                        His program is called Heavy Bucket and has become one of the most popular fitness
+                        regiments among semiprofessional Pickel Ball players.
+                        </p>
+            </div>
+            <div class = "column">
+                <h2>Director of Personnel:<br>Sunshine Dasiy</h2>
+                    <img src="./lib/images/tree-hugger.jpg" alt="Sunshine Dasiy">
+                        <P>
+                        Sunshine Dasiy became the Director of Personnel in 2018 after escaping from a fitness cult in Nevada. 
+                        She is in charge of all patrons and employees at Fit 4You. 
+                        She taught herself Astrophysics and is a leading Yogini after spending the covid
+                        quarantine watching yoga on PBS. 
+                        </P>
+            </div>
+        </div>
+        <div class = "row">
+            <div class = "column">
+                <h2>Chief Financial Officer:<br>Rupert Balthazar Hamish Hugo III</h2>
+                    <img src="./lib/images/cfo.jpg" alt="Rupert Balthazar Hamish Hugo III">
+                        <P>
+                            Rupert Balthazar Hamish Hugo III received his accounting degree from Cambridge University at the age of 13. 
+                            He made a fortune laundering money for the Mob in the '70s and '80s. 
+                            After the arrests of significant mafia members, Rupert played the stock market, becoming the wealthiest man in the world in 1997. 
+                            Unfortunately, he made risky investments in BlockBuster, Radioshack, Sears, Myspace, XFL, and DeLorean Motor Co. 
+                            He lost nearly all his fortune and was forced to work at Fit 4 You due to his criminal background.
+                        </P>
+            </div>
+            <div class = "column">
+                <h2>Chief human resources officer:<br>Bertha Smalls</h2>
+                    <img src="./lib/images/Bertha.jpeg" alt="Bertha Smalls">
+                        <p>
+                        Bertha Smalls is the oldest and most respected Fit 4 You team member. 
+                        She started her long and colorful career after graduating high school in 1943. 
+                        Her first job was as personal secretary to Albert Einstein during the Manhattan Project. 
+                        She is available during her office hours of 12:30 pm to 1:15 pm on most Mondays if you need to reach her.
+                        </p>
+            </div>
+        </div>
+        <h1>Personal Trainers</h1>
+        <div class = "row">
+            <div class = "column">
+                <h2>Chad Bradley</h2>
+                    <img src="./lib/images/chad.jpeg" alt="">
+                        <p>
+                        Chad is a fun-loving fitness guy who loves walks on the beach and soft kittens. 
+                        He received a Fitness science degree from Dumbell Online University. 
+                        Please avoid three-syllable words while talking to Chad. 
+                        </p>
+             </div>
+             <div class = "column">
+                <h2>Brad Chadley</h2>
+                    <img src="./lib/images/brad.jpeg" alt="Brad Chadley">
+                        <p>
+                        Brad Chadley is an in-your-face motivator. 
+                        He enjoys protein shakes, protein bars, self-tanner, and spandex. 
+                        Brad joined the Space Force after getting his GED, 
+                        served as a field refrigerator repair technician, and deployed to Antarctica in 2020. 
+                        Brad received a medical discharge after a critical head injury while trying to open 
+                        a beer keg with a headbutt. 
+                        </p>
+            </div>
+        </div>
+
+
     </section>
-    Management-Team
+    <button id="modalBTN">
+        <div id="modalShoutout">
+            <nobr>Join our newsletter!</nobr>
+            <div id="modalTriangle"></div>
+        </div>
+        <span>&#128203</span>
+    </button>
+    <div id="modal">
+        <div id="modal-background"></div>
+        <div id="modal-content">
+            <span id="modal-close">&times</span>
+            <h1>Welcome to FIT4U!</h1>
+            <form>
+                <fieldset>
+                    <legend>Personal Information: </legend>
+                    <label> First Name: </label>
+                    <input type ="text" id="firstname" placeholder = "Enter First Name" name ="firstname" required>
+                    <br><br>
+                    <label> Last Name: </label>
+                    <input type ="text" id="lastname" placeholder = "Enter Last Name" name ="lastname" required>
+                    <br><br>
+                    <label>Date of Birth:</label>
+                    <input type="date" name="DoB" required>
+                    <br><br>
+                    <!-- spacing on label is a little too tight without the below style-->
+                    <label class="subheading-label">Gender:</label>
+                    <br>
+                    <input type ="radio" id="MALE" name="GENDER" value="MALE">
+                    <label for="MALE">Male</label> <br>
+                    <input type="radio" id="FEMALE" name="GENDER" value="FEMALE">
+                    <label for="FEMALE">Female</label><br>
+                    <input type="radio" id="OTHER" name="GENDER" value="OTHER">
+                    <label for="OTHER">Other</label><br>
+                    <br>
+                    <!-- spacing on label is a little too tight without the below style-->
+                    <label class="subheading-label">What are you looking to accomplish in joining FIT4U?</label>
+                    <br>
+                    <textarea name="desc" id="desc" cols="40" rows="7" placeholder="Briefly tell us what you want to accomplish"></textarea>
+                    <br>
+                    <!-- spacing on label is a little too tight without the below style-->
+                    <label class="subheading-label">Would you want access to a personal trainer?</label>
+                    <br>
+                    <input type="radio" id="YES" name="BUTTON" value="YES">
+                    <label for="YES">Yes </label>
+                    <input type="radio" id="NO" name="BUTTON" value="NO">
+                    <label for="NO">No</label>
+                    <br>
+                    <button type="submit">Sign up</button>
+                </fieldset>
+            </form>
+        </div>
+    </div>
 </body>
 </html>

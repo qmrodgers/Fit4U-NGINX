@@ -10,7 +10,9 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro:ital,wght@0,200;0,300;0,400;0,600;0,700;0,900;1,200;1,300;1,400;1,600;1,700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="./lib/css/_layout.css">
+    <link rel="stylesheet" href="./lib/css/contact/contact.css">
     <link rel="icon" type="image/x-icon" href="./lib/images/favicon/0.5x/Asset2@0.5x.png">
+<script src="./lib/js/index.js" defer></script>
 </head>
 <body>
     <div class="nav-wrapper">
@@ -66,6 +68,57 @@
     </nav>
     <section class="main-container">
     </section>
-    Contact
+    <button id="modalBTN">
+        <div id="modalShoutout">
+            <nobr>Join our newsletter!</nobr>
+            <div id="modalTriangle"></div>
+        </div>
+        <span>&#128203</span>
+    </button>
+    <div id="modal">
+        <div id="modal-background"></div>
+        <div id="modal-content">
+            <span id="modal-close">&times</span>
+            <h1>Welcome to FIT4U!</h1>
+            <form>
+                <fieldset>
+                    <legend>Personal Information: </legend>
+                    <label> First Name: </label>
+                    <input type ="text" id="firstname" placeholder = "Enter First Name" name ="firstname" required>
+                    <br><br>
+                    <label> Last Name: </label>
+                    <input type ="text" id="lastname" placeholder = "Enter Last Name" name ="lastname" required>
+                    <br><br>
+                    <label>Date of Birth:</label>
+                    <input type="date" name="DoB" required>
+                    <br><br>
+                    <!-- spacing on label is a little too tight without the below style-->
+                    <label class="subheading-label">Gender:</label>
+                    <br>
+                    <input type ="radio" id="MALE" name="GENDER" value="MALE">
+                    <label for="MALE">Male</label> <br>
+                    <input type="radio" id="FEMALE" name="GENDER" value="FEMALE">
+                    <label for="FEMALE">Female</label><br>
+                    <input type="radio" id="OTHER" name="GENDER" value="OTHER">
+                    <label for="OTHER">Other</label><br>
+                    <br>
+                    <!-- spacing on label is a little too tight without the below style-->
+                    <label class="subheading-label">What are you looking to accomplish in joining FIT4U?</label>
+                    <br>
+                    <textarea name="desc" id="desc" cols="40" rows="7" placeholder="Briefly tell us what you want to accomplish"></textarea>
+                    <br>
+                    <!-- spacing on label is a little too tight without the below style-->
+                    <label class="subheading-label">Would you want access to a personal trainer?</label>
+                    <br>
+                    <input type="radio" id="YES" name="BUTTON" value="YES">
+                    <label for="YES">Yes </label>
+                    <input type="radio" id="NO" name="BUTTON" value="NO">
+                    <label for="NO">No</label>
+                    <br>
+                    <button type="submit">Sign up</button>
+                </fieldset>
+            </form>
+        </div>
+    </div>
 </body>
 </html>

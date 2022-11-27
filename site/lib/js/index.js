@@ -5,7 +5,7 @@ const modalBackground = document.getElementById("modal-background");
 const modalClose = document.getElementById("modal-close");
 
 modalBTN.onclick = () => {
-modal.style.display = "block";
+modal.style.display = "flex";
 }
 
 const closeModal = () => {

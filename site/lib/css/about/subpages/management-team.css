@@ -1,0 +1,38 @@
+h1{
+    font-size: 36pt;
+    color: darkgreen;
+    font-family: 'Source Sans Pro';
+}
+    
+h2{
+    text-align: center;
+    font-size: 24pt;
+    color: rgb(247, 7, 179);
+    font-family: 'Source Sans Pro', sans-serif;
+    
+}
+p{
+    font-size: 12pt;
+    font-family: 'Source Sans Pro', Times, serif;
+    color: black;
+    display: block;
+    margin-top: 1em;
+    margin-bottom: 1em;
+    margin-left: 50px;
+    margin-right:50px;
+}
+img {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 220px;
+    max-height: 271px;
+}
+.row::after{
+    display: block;
+}
+.column{
+    float: left;
+    width: 50%;
+    padding: 20px;
+}

@@ -274,6 +274,7 @@ background-color: var(--primary-off-white);
     z-index: 97;
     position: fixed;
     display: none;
+    align-items: center;
     height: 100%;
     width: 100%;
 }
@@ -286,7 +287,7 @@ background-color: var(--primary-off-white);
 
     to {
         opacity: 1;
-        top: 20%;
+        top: 0;
     }
 }
 #modal-background {
@@ -300,13 +301,14 @@ background-color: var(--primary-off-white);
 #modal-content {
     z-index: 99;
     display: flex;
+    flex-direction: column;
     justify-content: center;
     position:relative;
     background-color: var(--primary-off-white);
     animation: modal 600ms ease forwards;
     margin: 0 auto;
     width: 45%;
-    height: 600px;
+    height: fit-content;
     border-radius: .4rem;
     padding: 4rem;
 }
@@ -376,5 +378,18 @@ background-color: var(--primary-off-white);
     clip-path: polygon(0% 0%, 100% 0%, 50% 50%);
     width: 2rem;
     height: 2rem;
+}
+#modal-content form fieldset {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#modal-content button {
+    cursor: pointer;
+    display: block;
+    border-radius: .2rem;
+    border: 1px solid var(--primary-off-black);
+    padding: 1rem;
 }
 /* end of modal css*/
