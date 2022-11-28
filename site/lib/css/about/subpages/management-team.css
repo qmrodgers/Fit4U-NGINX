@@ -1,14 +1,15 @@
 h1{
     font-size: 36pt;
-    color: darkgreen;
+    color: var(--primary-color);
     font-family: 'Source Sans Pro';
 }
     
 h2{
     text-align: center;
     font-size: 24pt;
-    color: rgb(247, 7, 179);
-    font-family: 'Source Sans Pro', sans-serif;
+    color: var(--secondary-color);
+    font-family: 'Source Sans Pro';
+    text-shadow: 0px 8px 8px rgba(0,0,0,0.2);
     
 }
 p{

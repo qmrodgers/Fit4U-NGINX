@@ -57,6 +57,7 @@ body > *, form > * {
 .nav-wrapper {
     z-index: 5;
     display:flex;
+    flex-wrap: wrap;
     width: 100%;
     justify-content: center;
     background-color: var(--primary-color);
@@ -65,6 +66,7 @@ body > *, form > * {
 
 .nav-container {
     display: flex;
+    padding-inline: 1rem;
     gap: 1rem;
     align-items:center;
     justify-content:space-between;
@@ -193,6 +195,54 @@ border: 1px solid var(--primary-off-black);
 border-top: 2px solid var(--primary-color);
 }
 
+.search-box {
+    position: relative;
+    display: flex;
+    padding-block: 1rem;
+    margin-left: 1rem;
+
+}
+
+.form-search {
+    display: flex;
+    padding: 4px;
+    width: 100%;
+    border-width: 1px 0 1px 1px;
+    border-radius: 4px 0px 0px 4px;
+}
+
+.form-search:focus {
+    outline-style: solid;
+    outline-color: var(--secondary-color);
+    box-shadow: none;
+}
+
+.form-search:focus + .result-box {
+    display: block;
+}
+
+.search-submit {
+    background-color: var(--secondary-color);
+    width: 25px;
+    border: none;
+    border-radius: 0px 4px 4px 0px;
+    padding: 5px;
+    fill: white;
+    cursor: pointer;
+}
+
+.result-box {
+    position: absolute;
+    background-color: var(--primary-white);
+    padding: 1rem;
+    width: 100%;
+    height: fit-content;
+    top: 85%;
+    border: 1px solid black;
+    display: none;
+}
+
+
 /* breadcrumbs */
 .breadcrumb {
     display: flex;
@@ -207,7 +257,7 @@ border-top: 2px solid var(--primary-color);
     width: 100%;
     max-width: var(--max-width);
     list-style: none;
-    padding: 1rem 0;
+    padding: 1rem 1rem;
 
     
 }
@@ -248,7 +298,7 @@ border-top: 2px solid var(--primary-color);
     cursor: pointer;
     height: 60px;
     width: 60px;
-    bottom: 3rem;
+    bottom: 8rem;
     right: calc(var(--special-padding) + 2rem);
     transition: border-color 300ms ease, background-color 300ms ease;
     animation: modalLoad 600ms ease forwards;
@@ -393,3 +443,35 @@ background-color: var(--primary-off-white);
     padding: 1rem;
 }
 /* end of modal css*/
+
+/* footer css */
+footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: var(--primary-color);
+    width: 100%;
+    margin: 0;
+    padding: 1rem;
+    margin-top: 1rem;
+    font-family: 'Source Sans Pro';
+    color: white;
+    font-size: 1.8rem;
+}
+
+footer > * {
+    display: inline-flex;
+    gap: 1rem;
+    align-items: center;
+}
+
+
+
+
+.social-media-links > * {
+    display: inline-flex;
+    align-items: center;
+    width: 20px;
+    fill: white;
+}
+/* end of footer css */
