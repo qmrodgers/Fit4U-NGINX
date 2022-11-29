@@ -64,6 +64,11 @@ body > *, form > * {
     box-shadow: var(--primary-box-shadow);
 }
 
+#nav-toggle {
+    display: none;
+    
+}
+
 .nav-container {
     display: flex;
     padding-inline: 1rem;
@@ -307,6 +312,7 @@ border-top: 2px solid var(--primary-color);
     transition: border-color 300ms ease, background-color 300ms ease;
     animation: modalLoad 600ms ease forwards;
     animation-delay: 500ms;
+    z-index: 999;
 }
 
 #modalBTN > span {
@@ -485,9 +491,25 @@ footer img {
 /* end of footer css */
 
 
+@media screen and (max-width: 1500px) {
+    :root {
+        --max-width: 1000px;
+    }
+}
+
+
+
 
 /* below 1440px */
-@media screen and (max-width: 1440px) {
+@media screen and (max-width: 1050px) {
+    :root {
+        max-width: 100vw;
+    }
+
+    #modalBTN {
+        right: 100px;
+    }
+
     .nav-wrapper {
         flex-direction: column;
         position: absolute;
@@ -495,8 +517,73 @@ footer img {
         left: 0;
     }
 
+    #nav-toggle {
+        display: block;
+        position: absolute;
+        top: 12.5px;
+        left: 1rem;
+        background: none;
+        border: none;
+        cursor: pointer;
+        
+    }
+
+    #nav-toggle > svg {
+        transition: transform 200ms ease;
+        width: 50px;
+        height: 50px;
+        margin: auto;
+        transform: rotate(0);
+    }
+
+    #nav-toggle.active > svg {
+        transform: rotate(90deg);
+    }
+
+    .nav-brand {
+    
+    }
+
+    .navbox {
+        display: none;
+    }
+
+    .nav-container {
+        display: flex;
+        line-height: 75px;
+        height: 75px;
+        max-height: 75px;
+        
+    }
+
+    .nav-container * {
+        line-height: auto;
+    }
+
+    .nav-container > .brand-link > .nav-brand {
+        font-size: 4rem;
+    }
+
     .nav-container {
         flex-direction: column;
+        overflow: hidden;
+        transition: max-height 200ms ease;
+    }
+
+
+
+    #nav-toggle.active + .nav-container {
+        max-height: 2000px;
+        height: auto;
+    }
+
+    #nav-toggle.active + .nav-container > .navbox {
+        display: block;
+        font-size: 2rem;
+    }
+
+    .nav-container > .navbox > .navbar > li > a{
+        font-size: 4rem;
     }
 
     ul.navbar {
@@ -532,7 +619,36 @@ footer img {
     background-color: transparent;
     }
 
-    .navbar > li {
-        padding: 1rem;
+    .navbar > li > a {
+         padding-block: 0;
     }
+
+
+    .navbar > li {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin-bottom: 2rem;
+    }
+
+    .navbar > li:has(ul)::after {
+        display: flex;
+        position: relative;
+        top: 5px;
+        justify-content: center;
+        content: "";
+        background-color: var(--primary-white);
+        height: 1px;
+        width: 100px;
+        margin: 0
+    }
+
+    .nav-dropper + ul > a {
+        line-height: 1;
+        margin-bottom: 1rem;
+        }
+
+    .nav-dropper + ul > a:hover {
+        color: var(--primary-black);
+        }
 /* end of responsive css */

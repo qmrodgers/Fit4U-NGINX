@@ -87,3 +87,42 @@ h1 {
     border: 1px solid var(--primary-color);
 }
 
+.info-box {
+    display: flex;
+    flex-direction: row;
+    background-color: green;
+    width: 100%;
+    height: 600px;
+    padding: 2rem;
+}
+
+.info-box > * {
+    border: 1px solid black;
+    height: 100%;
+    width: 300px;
+}
+
+.info-box > aside {
+    background-color: white;
+}
+
+.info-box > div {
+
+}
+
+
+#slideshow {
+position: relative;
+top: -20px;
+background-color: blue;
+width: 100%;
+height: 600px;
+}
+
+#slideshow > img {
+position: absolute;
+width: 400px;
+
+}
+
+

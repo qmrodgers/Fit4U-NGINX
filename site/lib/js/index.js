@@ -14,3 +14,10 @@ const closeModal = () => {
 
 modalBackground.onclick = closeModal;
 modalClose.onclick = closeModal;
+
+
+const navToggle = document.getElementById("nav-toggle");
+
+navToggle.onclick = () => {
+    navToggle.classList.toggle("active");
+}
