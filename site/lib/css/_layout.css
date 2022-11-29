@@ -303,7 +303,7 @@ border-top: 2px solid var(--primary-color);
     height: 60px;
     width: 60px;
     bottom: 8rem;
-    right: calc(var(--special-padding) + 2rem);
+    right: calc(var(--special-padding) + 5vw);
     transition: border-color 300ms ease, background-color 300ms ease;
     animation: modalLoad 600ms ease forwards;
     animation-delay: 500ms;
@@ -483,3 +483,56 @@ footer img {
     fill: white;
 }
 /* end of footer css */
+
+
+
+/* below 1440px */
+@media screen and (max-width: 1440px) {
+    .nav-wrapper {
+        flex-direction: column;
+        position: absolute;
+        top: 0;
+        left: 0;
+    }
+
+    .nav-container {
+        flex-direction: column;
+    }
+
+    ul.navbar {
+        flex-direction: column;
+    }
+    .navbox {
+        height: fit-content;
+        
+    }
+
+    ul.navbar {
+        max-height: 100%;
+    }
+
+    .nav-dropper + ul {
+        display: flex;
+        flex-direction: column;
+        background-color: transparent;
+        box-shadow: none;
+        color: white;
+        align-items: center;
+        position: static;
+        width: 100%;
+    }
+
+    .nav-dropper:hover + ul, .nav-dropper + ul:hover, .nav-dropper:focus + ul, .nav-dropper + ul:focus {
+    display: flex;
+    border: none;
+    border-top: none;
+    }
+
+    .navbar > li:hover {
+    background-color: transparent;
+    }
+
+    .navbar > li {
+        padding: 1rem;
+    }
+/* end of responsive css */
