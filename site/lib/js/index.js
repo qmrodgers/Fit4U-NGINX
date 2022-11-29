@@ -17,7 +17,10 @@ modalClose.onclick = closeModal;
 
 
 const navToggle = document.getElementById("nav-toggle");
+const navWrapper = document.querySelector(".nav-wrapper");
 
 navToggle.onclick = () => {
     navToggle.classList.toggle("active");
+    
+
 }

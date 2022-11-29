@@ -511,9 +511,14 @@ footer img {
     }
 
     .nav-wrapper {
+        position: absolute;
         flex-direction: column;
         top: 0;
         left: 0;
+    }
+
+    .breadcrumb {
+        margin-top: 75px;
     }
 
     #nav-toggle {
@@ -569,6 +574,9 @@ footer img {
         transition: max-height 200ms ease;
     }
 
+    .nav-wrapper.absolute {
+        position: absolute;
+    }
 
 
     #nav-toggle.active + .nav-container {
