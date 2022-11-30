@@ -3,8 +3,8 @@
     -webkit-box-sizing: border-box;
     -moz-box-sizing: border-box;
     box-sizing: border-box;
-    --primary-color: #ed9b03;
-    --secondary-color: #3D7483;
+    --primary-color: #f5a818;
+    --secondary-color: #3f8ba0;
     --primary-off-black:#1e1d1d;
     --primary-off-white: #f7f7f7;
     --primary-white: white;
@@ -312,13 +312,27 @@ border-top: 2px solid var(--primary-color);
     transition: border-color 300ms ease, background-color 300ms ease;
     animation: modalLoad 600ms ease forwards;
     animation-delay: 500ms;
+    z-index: 998;
+}
+
+#modalBTN > i {
+    position: absolute;
+    display: block;
+    color: var(--primary-off-white);
+    cursor: pointer;
     z-index: 999;
+    top: -2.8rem;
+    right: -1.8rem;
+    font-size: 2rem;
+    font-style:normal;
+    font-weight: bold;
 }
 
 #modalBTN > span {
     position:relative;
     top: -.3rem;
-    transition: transform 300ms ease;
+    padding: 1rem;
+    transition: trnsform 300ms ease;
 }
 
 #modalBTN:hover {
@@ -580,8 +594,17 @@ footer img {
 
 
     #nav-toggle.active + .nav-container {
-        max-height: 2000px;
+        max-height: fit-content;
+        padding-bottom: 100px;
         height: auto;
+    }
+
+    .search-box {
+        height: 70px;
+    }
+
+    .search-box * {
+        font-size: 2rem;
     }
 
     #nav-toggle.active + .nav-container > .navbox {
