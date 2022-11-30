@@ -31,6 +31,7 @@ a {
 }
 
 body {
+    overflow-x: hidden;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -38,6 +39,17 @@ body {
     font-size: 1.6rem;
     font-family: sans-serif;
     min-height: 100vh;
+}
+
+body[data-overflow-y="auto"] {
+    overflow-y: auto;
+}
+
+body[data-overflow-y="scroll"] {
+    overflow-y: scroll;
+    position: relative;
+    left: 0;
+    width: calc(100% + 15px);
 }
 
 body > *, form > * {
@@ -304,7 +316,6 @@ border-top: 2px solid var(--primary-color);
     border-radius: 30%;
     font-size: 3.4rem;
     border-style:solid;
-    cursor: pointer;
     height: 60px;
     width: 60px;
     bottom: 8rem;
@@ -319,6 +330,11 @@ border-top: 2px solid var(--primary-color);
     position: absolute;
     display: block;
     color: var(--primary-off-white);
+    text-shadow:
+   -1px -1px 3px #000,  
+    1px -1px 3px #000,
+    -1px 1px 3px #000,
+     1px 1px 3px #000;
     cursor: pointer;
     z-index: 999;
     top: -2.8rem;
@@ -330,6 +346,7 @@ border-top: 2px solid var(--primary-color);
 
 #modalBTN > span {
     position:relative;
+    cursor: pointer;
     top: -.3rem;
     padding: 1rem;
     transition: trnsform 300ms ease;
@@ -526,6 +543,7 @@ footer img {
 
     .nav-wrapper {
         position: absolute;
+        z-index: 1005;
         flex-direction: column;
         top: 0;
         left: 0;
@@ -585,7 +603,7 @@ footer img {
     .nav-container {
         flex-direction: column;
         overflow: hidden;
-        transition: max-height 200ms ease;
+        transition: max-height 800ms ease;
     }
 
     .nav-wrapper.absolute {
@@ -594,7 +612,7 @@ footer img {
 
 
     #nav-toggle.active + .nav-container {
-        max-height: fit-content;
+        max-height: 2000px;
         padding-bottom: 100px;
         height: auto;
     }

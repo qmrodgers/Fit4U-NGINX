@@ -29,6 +29,14 @@ const navToggle = document.getElementById("nav-toggle");  // snatches up the nav
 const navWrapper = document.querySelector(".nav-wrapper"); // snatches up the first-found (the only one) nav-wrapper classed element
 
 navToggle.onclick = () => {
+    if (document.body.dataset.overflowY == "auto") {
+        document.body.dataset.overflowY = "scroll";
+        console.log("scroll");
+    }
+    else {
+        setTimeout(() => {document.body.dataset.overflowY = "auto"}, 20);
+        console.log("auto");
+    }
     navToggle.classList.toggle("active");  //adds the active class to the navToggle button, enabling its associated css animation
     
 };
