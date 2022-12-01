@@ -1,0 +1,33 @@
+.main-container {
+    text-align: center;
+  }
+  
+  .main-container h1 {
+    flex-basis: 100%;
+    text-align: center;
+    font-size: 6rem;
+    text-transform: uppercase;
+    letter-spacing: 0.8rem;
+    text-shadow: 0px 8px 8px rgba(0, 0, 0, 0.2);
+    color: var(--secondary-color);
+    font-family: "Source Sans Pro";
+  }
+  
+  .main-container .diet-container h2 {
+    flex-basis: 100%;
+    text-align: center;
+    font-size: 2rem;
+    text-transform: uppercase;
+    letter-spacing: 0.8rem;
+    text-shadow: 0px 8px 8px rgba(0, 0, 0, 0.2);
+    color: var(--secondary-color);
+    font-family: "Source Sans Pro";
+    padding-bottom: 1rem;
+  }
+  
+  .videos-container {
+    display: flex;
+    gap: 1rem;
+    flex-wrap: wrap;
+  }
+  

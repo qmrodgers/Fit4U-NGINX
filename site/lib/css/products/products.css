@@ -1,0 +1,85 @@
+.about-container {
+    display: flex;
+    gap: 1rem;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+  }
+  
+  .main-container h1 {
+    flex-basis: 100%;
+    text-align: center;
+    font-size: 6rem;
+    text-transform: uppercase;
+    letter-spacing: 0.8rem;
+    text-shadow: 0px 8px 8px rgba(0, 0, 0, 0.2);
+    color: var(--secondary-color);
+    font-family: "Source Sans Pro";
+  }
+  
+  .link-container {
+    position: relative;
+    background-size: 100%;
+    background-position: center center;
+    background-repeat: no-repeat;
+    width: 300px;
+    height: 370px;
+    transition: background-size 200ms ease;
+  }
+  .link-container:hover {
+    background-size: 105%;
+  }
+  
+  .management {
+    background-image: url("../../images/product-video.jpg");
+  }
+  
+  .annual-report {
+    background-image: url("../../images/product-training.jpg");
+    background-size: 125%;
+  }
+  
+  .annual-report:hover {
+    background-size: 130%;
+  }
+  
+  .logo {
+    background-image: url("../../images/product-clothing.jpg");
+  }
+  
+  .link-container > a {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    width: 100%;
+  }
+  
+  .link-container > a > .link-container-title {
+    position: relative;
+    z-index: 1;
+    pointer-events: none;
+    color: var(--primary-white);
+    text-shadow: 0px 8px 8px rgba(0, 0, 0, 0.897);
+  }
+  
+  .vignette {
+    position: absolute;
+    z-index: 0;
+    height: 100%;
+    width: 100%;
+    background: #3d74834f;
+    backdrop-filter: blur(3px);
+    transition: backdrop-filter 200ms ease, background 200ms ease;
+    -webkit-transition: backdrop-filter 200ms ease, background 200ms ease;
+    -o-transition: backdrop-filter 200ms ease, background 200ms ease;
+    -ms-transition: backdrop-filter 200ms ease, background 200ms ease;
+  }
+  
+  .vignette:hover {
+    backdrop-filter: blur(0px);
+    background: #3d74831a;
+  }
+  
