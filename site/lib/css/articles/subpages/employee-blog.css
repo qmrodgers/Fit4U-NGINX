@@ -1,0 +1,90 @@
+.main-container h1 {
+    flex-basis: 100%;
+    text-align: center;
+    font-size: 6rem;
+    text-transform: uppercase;
+    letter-spacing: .8rem;
+    text-shadow: 0px 8px 8px rgba(0,0,0,0.2);
+    color: var(--secondary-color);
+    font-family: 'Source Sans Pro';
+    padding-bottom: 20px;
+}
+
+.EB1{
+    display: flex;
+    border-bottom: solid;
+
+}
+.EB1 .img1{
+    height: auto;
+    width: auto;
+}
+.EB1 h2{
+    text-align: left;
+    font-size: 20px;
+}
+.EB1 p{
+    text-align: left;
+    font-size: 15px;
+}
+/*begin formatting for 2nd blog post*/
+
+.EB2{
+    display: flex;
+    border-bottom: solid;
+
+}
+.EB2 .img2{
+    height: auto;
+    width: auto;
+    padding-top: 5px;
+    padding-right: 5px;
+}
+.EB2 h2{
+    text-align: left;
+    font-size: 20px;
+}
+.EB2 p{
+    text-align: left;
+    font-size: 15px;
+}
+
+/*begin formatting for 3rd blog post*/
+.EB3{
+    display: flex;
+    border-bottom: solid;
+
+}
+.EB3 .img3{
+    height: auto;
+    width: auto;
+    padding-top: 5px;
+}
+.EB3 h2{
+    text-align: left;
+    font-size: 20px;
+}
+.EB3 p{
+    text-align: left;
+    font-size: 15px;
+}
+/*begin formatting for 4rd blog post*/
+.EB4{
+    display: flex;
+    border-bottom: solid;
+
+}
+.EB4 .img4{
+    height: auto;
+    width: auto;
+    padding-top: 5px;
+    padding-right: 5px;
+}
+.EB4 h2{
+    text-align: left;
+    font-size: 20px;
+}
+.EB4 p{
+    text-align: left;
+    font-size: 15px;
+}

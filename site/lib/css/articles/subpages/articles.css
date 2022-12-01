@@ -1,0 +1,71 @@
+.main-container h1 {
+    flex-basis: 100%;
+    text-align: center;
+    font-size: 6rem;
+    text-transform: uppercase;
+    letter-spacing: .8rem;
+    text-shadow: 0px 8px 8px rgba(0,0,0,0.2);
+    color: var(--secondary-color);
+    font-family: 'Source Sans Pro';
+    padding-bottom: 20px;
+}
+
+.article1{
+    display: flex;
+    border-bottom: solid;
+
+}
+.article1 .imga1{
+    height: auto;
+    width: auto;
+}
+.text1 h2{
+    text-align: left;
+    font-size: 20px;
+}
+.text1 p{
+    text-align: left;
+    font-size: 15px;
+}
+/*begin styling for article 2*/
+.article2{
+    display: flex;
+    padding-top: 5px;
+    border-bottom: solid;
+
+}
+.article2 .imga2{
+    height: auto;
+    width:auto;
+/*sized in html*/
+}
+
+
+.text2 h2{
+    text-align: left;
+    font-size: 20px;
+    padding-left: 5px;
+}
+.text2 p{
+    text-align: left;
+    font-size: 15px;
+    padding-left: 5px;
+}
+/*begin styling for article 3*/
+.article3{
+    display: flex;
+
+}
+.article3 .imga3{
+    height: auto;
+    width: auto;
+    padding-top: 5px;
+}
+.text3 h2{
+    text-align: left;
+    font-size: 20px;
+}
+.text3 p{
+    text-align: left;
+    font-size: 15px;
+}
