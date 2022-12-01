@@ -61,5 +61,167 @@ h1 {
     color: white;
 }
 
+.content-grid {
+    display: grid;
+    width: 100%;
+    height: 800px;
+    grid-template-columns: repeat(12, 1fr);
+    grid-template-rows: repeat(12, 1fr);
+    gap: 1rem;
+}
 
+.content-grid > * {
+    background-color: var(--primary-off-white);
+}
 
+.content-grid > aside {
+    grid-column: 1 / 5;
+    border: 1px solid var(--primary-color);
+
+    grid-row: 1/13;
+}
+
+.content-grid > main {
+    grid-column: 5 / 13;
+    grid-row: 1/7;
+    border: 1px solid var(--primary-color);
+}
+
+.middle-txt {
+    font-size: 40px;
+    font-weight: bold;
+    color: #ed9b03;
+    text-align: center;
+}
+
+.amenities {
+    font-size: 40px;
+    color: black;
+    display: flex;
+    justify-content: center;
+    padding-inline: 200px;
+    gap: 35px;
+}
+
+.amenities > ul > li {
+    text-align: left;
+    margin-right: auto;
+}
+
+.amenities > * {
+    padding-inline: 1rem;
+}
+
+.amenities > div {
+    display: flex;
+    gap: 35px;
+}
+.amenities > ul {
+padding: 2rem;
+}
+
+.amenities > div > div {
+    background-color: #ed9b03;
+    padding: 2rem;
+}
+
+.amenities > div > div {
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.price-button {
+   margin-top: auto; 
+}
+
+.price-button > button {
+    font-size: 2.5rem;
+    letter-spacing: 3px;
+    padding: 1.5rem;
+    background-color: var(--primary-off-black);
+    color: var(--primary-off-white);
+    border-radius: 4px;
+    border: 2px solid var(--primary-off-white);
+}
+
+/* beginning slideshow */
+* {box-sizing:border-box}
+
+.slideshow-container {
+  max-width: 1000px;
+  position: relative;
+  margin: auto;
+}
+
+.mySlides {
+  display: none;
+}
+
+.prev, .next {
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  width: auto;
+  margin-top: -22px;
+  padding: 16px;
+  color: white;
+  font-weight: bold;
+  font-size: 18px;
+  transition: 0.6s ease;
+  border-radius: 0 3px 3px 0;
+  user-select: none;
+}
+
+.next {
+  right: 0;
+  border-radius: 3px 0 0 3px;
+}
+
+.prev:hover, .next:hover {
+  background-color: rgba(0,0,0,0.8);
+}
+
+.text {
+  color: #f2f2f2;
+  font-size: 15px;
+  padding: 8px 12px;
+  position: absolute;
+  bottom: 8px;
+  width: 100%;
+  text-align: center;
+}
+
+.numbertext {
+  color: #f2f2f2;
+  font-size: 12px;
+  padding: 8px 12px;
+  position: absolute;
+  top: 0;
+}
+
+.dot {
+  cursor: pointer;
+  height: 15px;
+  width: 15px;
+  margin: 0 2px;
+  background-color: #bbb;
+  border-radius: 50%;
+  display: inline-block;
+  transition: background-color 0.6s ease;
+}
+
+.active, .dot:hover {
+  background-color: #717171;
+}
+
+.fade {
+  animation-name: fade;
+  animation-duration: 1.5s;
+}
+
+@keyframes fade {
+  from {opacity: .4}
+  to {opacity: 1}
+}
