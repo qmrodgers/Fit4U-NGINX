@@ -40,3 +40,60 @@ navToggle.onclick = () => {
     navToggle.classList.toggle("active");  //adds the active class to the navToggle button, enabling its associated css animation
     
 };
+
+let slideIndex = 0;
+
+let slideInterval = setInterval(() => {
+    plusSlides(1);
+}, 4000);
+
+
+showSlides(slideIndex);
+
+
+function plusSlides(n) {
+
+    clearInterval(slideInterval);
+
+    slideInterval = setInterval(() => {
+        plusSlides(1);
+    }, 4000);
+
+    showSlides(slideIndex += n);
+
+
+}
+
+
+
+
+function currentSlide(n) {
+clearInterval(slideInterval);
+slideInterval = setInterval(() => {
+    plusSlides(1);
+}, 4000);
+
+  showSlides(slideIndex = n);
+
+}
+
+function showSlides(n) {
+  let i;
+  let slides = document.getElementsByClassName("mySlides");
+  let dots = document.getElementsByClassName("dot");
+  if (n > slides.length - 1) {slideIndex = 0}
+  if (n < 0) {
+    slideIndex = slides.length - 1;
+  }
+  for (i = 0; i < dots.length; i++) {
+    if (i != slideIndex) {
+        dots[i].classList.remove("active");
+        slides[i].classList.remove("active");
+    }
+
+    if (i === slideIndex) {
+        dots[i].classList.add("active");
+        slides[i].classList.add("active");
+    }
+  }
+}

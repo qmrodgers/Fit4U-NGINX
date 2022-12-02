@@ -88,49 +88,73 @@ h1 {
 }
 
 .middle-txt {
-    font-size: 40px;
+    color: black;
+    padding: 2rem;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    justify-content: center;
+    font-size: clamp(3rem, 4vw, 8rem);
     font-weight: bold;
-    color: #ed9b03;
     text-align: center;
+    width: 100%;
+}
+
+.middle-txt > * {
+
+}
+
+.middle-txt > span:first-child {
+
+  color: var(--primary-color);
+
+}
+
+.middle-txt > span:last-child {
+  color: var(--secondary-color);
 }
 
 .amenities {
+    flex-wrap: wrap;
     font-size: 40px;
     color: black;
     display: flex;
     justify-content: center;
-    padding-inline: 200px;
-    gap: 35px;
-}
-
-.amenities > ul > li {
-    text-align: left;
-    margin-right: auto;
-}
-
-.amenities > * {
+    align-items: center;
+    width: 100%;
+    gap: 1rem;
     padding-inline: 1rem;
 }
 
 .amenities > div {
     display: flex;
-    gap: 35px;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 1rem;
+    width: auto;
 }
 .amenities > ul {
-padding: 2rem;
+width: 300px;
+min-height: 300px;
+display: flex;
+flex-direction: column;
+justify-content: center;
+align-items: center;
+list-style-type:circle;
 }
 
 .amenities > div > div {
+    overflow: hidden;
     background-color: #ed9b03;
+    width: 300px;
+    min-height: 300px;
+    flex-grow: 1;
     padding: 2rem;
-}
-
-.amenities > div > div {
     text-align: center;
     display: flex;
     flex-direction: column;
     align-items: center;
 }
+
 
 .price-button {
    margin-top: auto; 
@@ -147,17 +171,33 @@ padding: 2rem;
 }
 
 /* beginning slideshow */
-* {box-sizing:border-box}
 
 .slideshow-container {
-  max-width: 1000px;
   position: relative;
-  margin: auto;
+  display: flex;
+  height:600px;
+  overflow: hidden;
+  margin-top: 1rem;
+  width: 100%;
 }
 
 .mySlides {
   display: none;
+  position: absolute;
+  width: 100%;
+  min-width: 300px;
+  height: 600px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
+
+.mySlides > img {
+min-width: 300px;
+position: relative;
+}
+
+
 
 .prev, .next {
   cursor: pointer;
@@ -201,6 +241,10 @@ padding: 2rem;
   top: 0;
 }
 
+.mySlides.active {
+  display: flex;
+}
+
 .dot {
   cursor: pointer;
   height: 15px;
@@ -212,14 +256,22 @@ padding: 2rem;
   transition: background-color 0.6s ease;
 }
 
-.active, .dot:hover {
+
+
+
+.dot.active, .dot:hover {
   background-color: #717171;
 }
 
 .fade {
+  display: none;
   animation-name: fade;
   animation-duration: 1.5s;
 }
+
+
+
+
 
 @keyframes fade {
   from {opacity: .4}
