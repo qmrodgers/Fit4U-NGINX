@@ -42,50 +42,26 @@ h1 {
 }
 
 .jt-text > a {
-    font-size: 5rem;
-    top: 4.2rem;
+    font-size: clamp(1rem, 3.5vw, 5rem);
+    line-height: 3;
 
 }
 
 .jt-text > h1 {
-    font-size: 16rem;
+    font-size: clamp(5rem, 15vw, 16rem);
+    line-height: .8;
 
 }
 .jt-text > p {
-    font-size: 8rem;
-    top: -4.5rem;
+    font-size: clamp(2.5rem, 4vw, 8rem);
     color: var(--primary-off-white);
+    line-height: 1.5;
 }
 
 .jumbotron * {
     color: white;
 }
 
-.content-grid {
-    display: grid;
-    width: 100%;
-    height: 800px;
-    grid-template-columns: repeat(12, 1fr);
-    grid-template-rows: repeat(12, 1fr);
-    gap: 1rem;
-}
-
-.content-grid > * {
-    background-color: var(--primary-off-white);
-}
-
-.content-grid > aside {
-    grid-column: 1 / 5;
-    border: 1px solid var(--primary-color);
-
-    grid-row: 1/13;
-}
-
-.content-grid > main {
-    grid-column: 5 / 13;
-    grid-row: 1/7;
-    border: 1px solid var(--primary-color);
-}
 
 .middle-txt {
     color: black;
@@ -113,16 +89,111 @@ h1 {
   color: var(--secondary-color);
 }
 
+.main-wrapper {
+  font-family: Helvetica, "Source Sans Pro", sans-serif;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 1rem;
+  width: 100%;
+  min-height: 500px;
+}
+
+.sidebar {
+  display: flex;
+  background-color: var(--secondary-color-dark);
+  color: var(--primary-off-white);
+  flex-direction: column;
+  align-items: center;
+  min-width: 300px;
+  width: auto;
+  border-radius: 8px;
+  padding-block: 1rem;
+  flex-grow: 1;
+}
+
+.sidebar > h1 {
+  line-height: 2;
+  color: var(--primary-white);
+  text-transform: uppercase;
+  letter-spacing: 2px;
+}
+
+.sidebar > .group {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: none;
+  align-items: center;
+  width: 100%;
+  margin-bottom: 1rem;
+}
+
+.sidebar > .group:not(:last-child) {
+  margin-bottom: 2rem;
+}
+
+.sidebar > .group > * {
+  text-transform: uppercase;
+  padding-inline: 1rem;
+  width: 100%;
+  text-align: center;
+  transition: color 200ms ease, background-color 300ms ease;
+}
+
+.sidebar > .group > a:first-child {
+  position: relative;
+  font-size: 3rem;
+  line-height: 1.8;
+  margin-bottom: 1rem;
+}
+
+.sidebar > .group > a:first-child::after {
+  content: "";
+  position: absolute;
+  background-color: var(--primary-off-white);
+  height: 2px;
+  width: min(200px, 60%);
+  transition: width 300ms ease;
+  margin-left: auto;
+  margin-right: auto;
+  bottom: 1px;
+  left: 0;
+  right: 0;
+}
+
+.sidebar > .group > a:first-child:hover, .sidebar > .group > a:first-child:focus {
+  color: var(--primary-color);
+  text-decoration: none;
+}
+
+.sidebar > .group > a:first-child:hover::after, .sidebar > .group > a:first-child:focus::after{
+  width: 0;
+}
+
+.sidebar > .group > a:not(:first-child) {
+  font-size: 2.4rem;
+  line-height: 1.7;
+  
+}
+
+.sidebar > .group > a:not(:first-child):hover, .sidebar > .group > a:not(:first-child):focus {
+  color: var(--primary-color);
+  background-color: var(--secondary-color);
+  
+}
+
 .amenities {
+    flex-direction: column;
     flex-wrap: wrap;
     font-size: 40px;
     color: black;
     display: flex;
-    justify-content: center;
+    justify-content: space-between;
     align-items: center;
-    width: 100%;
     gap: 1rem;
-    padding-inline: 1rem;
+    flex-grow: 1;
+    
+
 }
 
 .amenities > div {
@@ -130,12 +201,14 @@ h1 {
     flex-wrap: wrap;
     justify-content: center;
     gap: 1rem;
-    width: auto;
 }
 .amenities > ul {
-width: 300px;
-min-height: 300px;
+min-width: 400px;
+min-height: 400px;
+font-size: clamp(16px, 8vw, 6rem);
+line-height: 1.5;
 display: flex;
+flex-wrap: wrap;
 flex-direction: column;
 justify-content: center;
 align-items: center;
@@ -143,9 +216,10 @@ list-style-type:circle;
 }
 
 .amenities > div > div {
-    overflow: hidden;
+    position: relative;
     background-color: #ed9b03;
-    width: 300px;
+    border-radius: 8px;
+    min-width: 500px;
     min-height: 300px;
     flex-grow: 1;
     padding: 2rem;
@@ -155,18 +229,64 @@ list-style-type:circle;
     align-items: center;
 }
 
+.amenities > div > div:last-child {
+  transition: border-radius 500ms ease;
+}
+
+.amenities > div > div:last-child::after {
+  content: "RECOMMENDED!";
+  position: absolute;
+  background-color: black;
+  color: rgba(255, 255, 255, 0);
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  font-size: .4em;
+  border-radius: 8px 8px 0 0;
+  height: 20px;
+  top: -20px;
+  width: 0;
+  left: 0;
+  right: 0;
+  margin-left: auto;
+  margin-right: auto;
+  transition: width 300ms ease, color 300ms ease 300ms;
+  opacity: 0;
+}
+
+.amenities > div > div:last-child:hover, .amenities > div > div:last-child:focus{
+  border-radius: 0 0 8px 8px;
+}
+.amenities > div > div:last-child:hover::after, .amenities > div > div:last-child:focus::after{
+  width: 100%;
+  color: rgb(255, 255, 255);
+  opacity: 1;
+  
+}
+.amenities > div > div > p {
+  font-size: .4em;
+  line-height: 1.5;
+  margin-bottom: 1rem;
+}
+
+.amenities > div > div:first-child {
+    background-color: var(--secondary-color-dark);
+    color: var(--primary-white);
+}
 
 .price-button {
+   position: relative;
    margin-top: auto; 
 }
 
 .price-button > button {
     font-size: 2.5rem;
+    cursor: pointer;
     letter-spacing: 3px;
     padding: 1.5rem;
     background-color: var(--primary-off-black);
     color: var(--primary-off-white);
-    border-radius: 4px;
+    border-radius: 8px;
     border: 2px solid var(--primary-off-white);
 }
 
@@ -231,6 +351,7 @@ position: relative;
   bottom: 8px;
   width: 100%;
   text-align: center;
+  text-shadow: 1px 1px 3px black;
 }
 
 .numbertext {
@@ -276,4 +397,42 @@ position: relative;
 @keyframes fade {
   from {opacity: .4}
   to {opacity: 1}
+}
+
+
+
+@media screen and (max-width: 1050px) {
+  
+.jt-text {
+  text-align: left;
+  z-index: 2;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  margin: auto auto;
+  align-items: center;
+  grid-column: 1/13;
+  grid-row: 1/13;
+  font-family: 'Source Sans Pro';
+}
+.jt-text > * {
+  position: relative;
+}
+
+.jt-text > a {
+  font-size: clamp(3rem, 3.5vw, 5rem);
+  line-height: 2;
+
+}
+
+.jt-text > h1 {
+  font-size: clamp(5rem, 25vw, 16rem);
+  line-height: .8;
+
+}
+.jt-text > p {
+  font-size: clamp(2.5rem, 8vw, 6rem);
+  color: var(--primary-off-white);
+  line-height: 1.5;
+}
 }

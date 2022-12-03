@@ -5,6 +5,7 @@
     box-sizing: border-box;
     --primary-color: #f5a818;
     --secondary-color: #3f8ba0;
+    --secondary-color-dark: hsl(193, 43%, 30%);
     --primary-off-black:#1e1d1d;
     --primary-off-white: #f7f7f7;
     --primary-white: white;
