@@ -1,0 +1,61 @@
+.main-container h1 {
+    flex-basis: 100%;
+    text-align: center;
+    font-size: 6rem;
+    text-transform: uppercase;
+    letter-spacing: .8rem;
+    text-shadow: 0px 8px 8px rgb(0 0 0 / 20%);
+    color: var(--secondary-color);
+    font-family: 'Source Sans Pro';
+}
+
+.socials {
+    display: flex;
+    justify-content: inherit;
+    align-items: center;
+    flex-direction: column;
+}
+
+.socials > div {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    gap: 2rem;
+    
+}
+
+.socials > div > p {
+    text-transform: uppercase;
+    font-family: "Source Sans Pro", sans-serif;
+    font-size: 3rem;
+    min-width: 400px;
+    text-align: center;
+
+}
+
+@keyframes socialTilt {
+    from {
+        transform: rotate(0);
+    }
+    to {
+        transform: rotate(10deg);
+    }
+}
+
+.socials > div > a {
+    fill: var(--secondary-color);
+    transition: fill 400ms ease;
+    transform: rotate(0);
+}
+
+.socials > div > a:hover, .socials > div > a:focus {
+    fill: var(--secondary-color-dark);
+    animation: socialTilt 300ms ease forwards;
+    outline: none;
+}
+
+.socials > div > a > svg {
+    min-width: 200px;
+
+}
