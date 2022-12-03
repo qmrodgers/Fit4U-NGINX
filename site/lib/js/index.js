@@ -41,25 +41,25 @@ navToggle.onclick = () => {
     
 };
 
-let slideIndex = 0;
+let slideIndex = 0; // set initial index for slideshow
 
 let slideInterval = setInterval(() => {
     plusSlides(1);
-}, 4000);
+}, 4000);  //set an interval that automatically increments the slide after 4s of inactivity. Saves the interval ID to a value that can be cleared later
 
 
-showSlides(slideIndex);
+showSlides(slideIndex); //show initial slide
 
 
-function plusSlides(n) {
+function plusSlides(n) { //will advance the slides by n-amount
 
-    clearInterval(slideInterval);
+    clearInterval(slideInterval); // clear any existing interval so the slides dont keep advancing automatically when the user is using it
 
-    slideInterval = setInterval(() => {
+    slideInterval = setInterval(() => { //reset the interval to advance every 4 seconds
         plusSlides(1);
     }, 4000);
 
-    showSlides(slideIndex += n);
+    showSlides(slideIndex += n); //increase slide by one
 
 
 }
@@ -67,33 +67,32 @@ function plusSlides(n) {
 
 
 
-function currentSlide(n) {
-clearInterval(slideInterval);
-slideInterval = setInterval(() => {
+function currentSlide(n) { //sets slide to slide number n
+clearInterval(slideInterval); // clear interval to prevent auto sliding
+slideInterval = setInterval(() => { //reset it to 4s from now
     plusSlides(1);
 }, 4000);
 
-  showSlides(slideIndex = n);
+  showSlides(slideIndex = n); //set slide
 
 }
 
-function showSlides(n) {
-  let i;
-  let slides = document.getElementsByClassName("mySlides");
-  let dots = document.getElementsByClassName("dot");
-  if (n > slides.length - 1) {slideIndex = 0}
+function showSlides(n) { //for setting slides
+  let slides = document.getElementsByClassName("mySlides"); //get slides in an array
+  let dots = document.getElementsByClassName("dot"); //get dots in an array
+  if (n > slides.length - 1) {slideIndex = 0} //sets slide to 0 if slide advances past the amount of available slides
   if (n < 0) {
-    slideIndex = slides.length - 1;
+    slideIndex = slides.length - 1; //goes to last slide if index goes below 0
   }
-  for (i = 0; i < dots.length; i++) {
+  for (let i = 0; i < dots.length; i++) { //removes css active class from slide being transferred from
     if (i != slideIndex) {
-        dots[i].classList.remove("active");
-        slides[i].classList.remove("active");
+        dots[i].classList.remove("active"); //makes dot inactive again
+        slides[i].classList.remove("active"); //makes slide inactive again
     }
 
-    if (i === slideIndex) {
-        dots[i].classList.add("active");
-        slides[i].classList.add("active");
+    if (i === slideIndex) { //activates slide at new index
+        dots[i].classList.add("active"); //applies color to dot
+        slides[i].classList.add("active"); //applies active effects to slide
     }
   }
 }
