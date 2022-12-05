@@ -12,13 +12,18 @@
 
 .article1{
     display: flex;
-    border-bottom: solid;
+    border-bottom: solid 3px var(--primary-color);
 
 }
 .article1 .imga1{
     height: auto;
     width: auto;
 }
+
+h2 {
+    color: var(--secondary-color);
+}
+
 .text1 h2{
     text-align: left;
     font-size: 20px;
@@ -31,7 +36,7 @@
 .article2{
     display: flex;
     padding-top: 5px;
-    border-bottom: solid;
+    border-bottom: solid 3px var(--primary-color);
 
 }
 .article2 .imga2{

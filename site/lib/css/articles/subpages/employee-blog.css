@@ -12,13 +12,18 @@
 
 .EB1{
     display: flex;
-    border-bottom: solid;
+    border-bottom: solid 3px var(--primary-color);
 
 }
 .EB1 .img1{
     height: auto;
     width: auto;
 }
+
+h2 {
+    color: var(--secondary-color);
+}
+
 .EB1 h2{
     text-align: left;
     font-size: 20px;
@@ -31,7 +36,7 @@
 
 .EB2{
     display: flex;
-    border-bottom: solid;
+    border-bottom: solid 3px var(--primary-color);
 
 }
 .EB2 .img2{
@@ -52,7 +57,7 @@
 /*begin formatting for 3rd blog post*/
 .EB3{
     display: flex;
-    border-bottom: solid;
+    border-bottom: solid 3px var(--primary-color);
 
 }
 .EB3 .img3{
@@ -71,7 +76,7 @@
 /*begin formatting for 4rd blog post*/
 .EB4{
     display: flex;
-    border-bottom: solid;
+    border-bottom: solid 3px var(--primary-color);
 
 }
 .EB4 .img4{
