@@ -17,6 +17,7 @@ h1 {
 }
 
 p {
-
+    text-align: center;
     width: 70%;
+    line-height: 1.5;
 }

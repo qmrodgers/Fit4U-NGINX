@@ -192,6 +192,7 @@ h1 {
     align-items: center;
     gap: 1rem;
     flex-grow: 1;
+    max-width: 100%;
     
 
 }
@@ -200,10 +201,10 @@ h1 {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
-    gap: 1rem;
+    gap: 2.5rem;
 }
 .amenities > ul {
-min-width: 400px;
+min-width: 300px;
 min-height: 400px;
 font-size: clamp(16px, 8vw, 6rem);
 line-height: 1.5;
@@ -219,7 +220,7 @@ list-style-type:circle;
     position: relative;
     background-color: #ed9b03;
     border-radius: 8px;
-    min-width: 500px;
+    width: clamp(300px, 100%, 600px);
     min-height: 300px;
     flex-grow: 1;
     padding: 2rem;
@@ -295,8 +296,8 @@ list-style-type:circle;
 .slideshow-container {
   position: relative;
   display: flex;
-  height:600px;
   overflow: hidden;
+  height: min(75vw, 600px);
   margin-top: 1rem;
   width: 100%;
 }
@@ -305,16 +306,16 @@ list-style-type:circle;
   display: none;
   position: absolute;
   width: 100%;
-  min-width: 300px;
-  height: 600px;
-  display: flex;
-  align-items: center;
+  height: 100%;
   justify-content: center;
 }
 
 .mySlides > img {
-min-width: 300px;
-position: relative;
+position: absolute;
+min-height: min(75vw, 600px);
+min-width: 100%;
+max-width: 150%;
+height: auto;
 }
 
 
@@ -435,4 +436,18 @@ position: relative;
   color: var(--primary-off-white);
   line-height: 1.5;
 }
+}
+
+
+@media screen and (max-width: 500px) {
+
+  .jumbotron > .vignette {
+    background: #1f3b4273;
+}
+
+  .jumbotron {
+    background-position: 90% 50%;
+  }
+
+
 }
