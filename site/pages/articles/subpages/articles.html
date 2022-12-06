@@ -3,25 +3,26 @@
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, height=device-height">
-    <base href="../../../">
-    <title>Fit4U - Fitness Redefined</title>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro:ital,wght@0,200;0,300;0,400;0,600;0,700;0,900;1,200;1,300;1,400;1,600;1,700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="./lib/css/_layout.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, height=device-height">    <!-- Meta tags to establish some site metadata -->
+    <base href="../../../">   <!-- Setting a base relative path, such that our navbar links will always work using relative links-->
+    <title>Fit4U - Articles</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com"> <!-- Web Font Linking -->
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin> <!-- Web Font Linking -->
+    <link href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro:ital,wght@0,200;0,300;0,400;0,600;0,700;0,900;1,200;1,300;1,400;1,600;1,700&display=swap" rel="stylesheet"> <!-- Web Font Linking-->
+    <link rel="stylesheet" href="./lib/css/_layout.css"> <!-- Linking overall layout css file-->
     <link rel="stylesheet" href="./lib/css/articles/subpages/articles.css">
-    <link rel="icon" type="image/x-icon" href="./lib/images/favicon/0.5x/f4u@0.5x.png">
-<script src="./lib/js/index.js" defer></script>
+     <!-- Linking page-specific css -->
+    <link rel="icon" type="image/x-icon" href="./lib/images/favicon/0.5x/f4u@0.5x.png"> <!-- Site favicon -->
+    <script src="./lib/js/index.js" defer></script> <!-- link javascript file, use defer keyword to have it load after page content does -->
 </head>
-<body data-overflow-y="auto">
-        <div class="nav-wrapper">
-        <button id="nav-toggle" class="">
+<body data-overflow-y="auto"> <!-- data attribute is to fix some weird navbar expansion issues on mobile -->
+        <div class="nav-wrapper"> <!-- wrapper for navbar -->
+        <button id="nav-toggle" class=""> <!-- This button only appears on smaller screen sizes. See _layout.css -->
             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Pro 6.2.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2022 Fonticons, Inc. --><path d="M438.6 278.6c12.5-12.5 12.5-32.8 0-45.3l-160-160c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3L338.8 224 32 224c-17.7 0-32 14.3-32 32s14.3 32 32 32l306.7 0L233.4 393.4c-12.5 12.5-12.5 32.8 0 45.3s32.8 12.5 45.3 0l160-160z"/></svg>
         </button>
-    <div class="nav-container">
-        <a href="./index.html" class="brand-link"><h3 class="nav-brand">Fit4U</h3></a>
-        <nav class="navbox">
+    <div class="nav-container"> <!-- Main navigation content -->
+        <a href="./index.html" class="brand-link"><h3 class="nav-brand">Fit4U</h3></a> <!-- Fit4U brand button -->
+        <nav class="navbox"> 
             <ul class="navbar">
                 <li><a href="./pages/products/products.html" class="nav-dropper">Products</a> <ul>
                     <a href="./pages/products/subpages/videos.html" class="child-nav">
@@ -57,8 +58,8 @@
                         <li>Columns</li>
                     </a>
                 </ul></li>
-                <li><a href="./pages/contact/contact.html" class="nav-dropper">Contact Us</a></li>
-                <div class="search-box">
+                <li class="contact"><a href="./pages/contact/contact.html" class="nav-dropper">Contact Us</a></li>
+                <div class="search-box"> <!-- Search button, lacking functionality but will only need to create an api to fetch search info from -->
                     <input type="search" id="search-form" class="form-search" placeholder="Search"/>
                     <div class="result-box">Search awaiting implementation</div>
                     <button type="button" class="search-submit">
@@ -66,18 +67,17 @@
                     </button>
                 </div>
             </ul>
-            
         </nav>
-        </div>
     </div>
-    <nav class="breadcrumb">
+    </div>
+    <nav class="breadcrumb"> <!-- Page breadcrumb for easy backwards traversal -->
         <ul>
             <li><a href="./index.html">Home</a></li>
             <li><a href="./pages/articles/articles.html">Articles</a></li>
             <li>Articles</li>
         </ul>
     </nav>
-    <section class="main-container">
+    <section class="main-container"> <!-- This container exists on every page to allow people to safely work in an isolated environment for their page without affecting the navbar, footer, breadcrumb, etc. -->
         <h1>Articles</h1>
     <div class="article1">
         <div class="text1">
@@ -134,17 +134,17 @@
     </div>
 </div>
     </section>
-    <button id="modalBTN">
-       <div id="modalShoutout">
+    <button id="modalBTN"> <!-- modal button that follows you on the screen to advertise a form submission -->
+       <div id="modalShoutout"> <!-- modal text -->
             <nobr>Join our newsletter!</nobr>
-            <div id="modalTriangle"></div>
+            <div id="modalTriangle"></div> <!-- triangle shape cut with css to create a speech bubble -->
         </div>
-        <i id="kill-modal">✕</i>
+        <i id="kill-modal">✕</i>  <!-- button to remove modal from current page -->
         <span>&#128203</span>
     </button>
-    <div id="modal">
+    <div id="modal"> <!-- form content that pops up when the modal button is clicked -->
         <div id="modal-background"></div>
-        <div id="modal-content">
+        <div id="modal-content"> <!-- a modal form that has a submit button (non-functional)-->
             <span id="modal-close">&times</span>
             <h1>Welcome to FIT4U!</h1>
             <form>
@@ -187,10 +187,10 @@
             </form>
         </div>
     </div>
-    <footer>
-        <span class="copyright">© Fit4U</span>
-        <span><img src="./lib/images/favicon/0.5x/f4u@0.5x.png"/>Fit4U</span>
-        <span class="social-media-links">
+    <footer> <!-- Footer with some basic information on it, contact, etc. -->
+        <span class="copyright">© Fit4U</span> <!-- Fake Copyright Symbol-->
+        <span><img src="./lib/images/favicon/0.5x/f4u@0.5x.png"/>Fit4U</span> <!-- Title with favicon -->
+        <span class="social-media-links"> <!-- various blank social media's -->
             <a href="" title="Facebook (none available)">
                 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Pro 6.2.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2022 Fonticons, Inc. --><path d="M504 256C504 119 393 8 256 8S8 119 8 256c0 123.78 90.69 226.38 209.25 245V327.69h-63V256h63v-54.64c0-62.15 37-96.48 93.67-96.48 27.14 0 55.52 4.84 55.52 4.84v61h-31.28c-30.8 0-40.41 19.12-40.41 38.73V256h68.78l-11 71.69h-57.78V501C413.31 482.38 504 379.78 504 256z"/></svg>
             </a>
