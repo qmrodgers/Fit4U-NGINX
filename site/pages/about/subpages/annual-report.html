@@ -10,7 +10,7 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin> <!-- Web Font Linking -->
     <link href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro:ital,wght@0,200;0,300;0,400;0,600;0,700;0,900;1,200;1,300;1,400;1,600;1,700&display=swap" rel="stylesheet"> <!-- Web Font Linking-->
     <link rel="stylesheet" href="./lib/css/_layout.css"> <!-- Linking overall layout css file-->
-    <link rel="stylesheet" href="./lib/css/about/subpages/annual-report.css">
+    <link rel="stylesheet" href="./lib/css/about/subpages/annual-report.css"> <!-- css file referance to the maincontainer css file-->
      <!-- Linking page-specific css -->
     <link rel="icon" type="image/x-icon" href="./lib/images/favicon/0.5x/f4u@0.5x.png"> <!-- Site favicon -->
     <script src="./lib/js/index.js" defer></script> <!-- link javascript file, use defer keyword to have it load after page content does -->
@@ -78,7 +78,8 @@
         </ul>
     </nav>
     <section class="main-container"> <!-- This container exists on every page to allow people to safely work in an isolated environment for their page without affecting the navbar, footer, breadcrumb, etc. -->
- 
+        
+        <!-- This is image refrences to the infographics displayed on the page -->
         <img src="./lib/images/finances.png" alt="Gym Statistics"/>
         <img src="./lib/images/the-cost-of-fitness.jpg" alt="The Cost of Fitness"/>
         <img src="./lib/images/EL-Health-Wellness-Expenses.jpg" alt="Health and Wellness"/>
